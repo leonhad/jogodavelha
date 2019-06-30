@@ -1,10 +1,3 @@
-//
-// File:   game.h
-// Author: leonardo.costa
-//
-// Created on 1 de Agosto de 2006, 08:32
-//
-
 #ifndef _game_H
 #define	_game_H
 
@@ -16,8 +9,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
+
+#if defined(HAVE_WINDOWS_H) && defined(_WIN32)
+    #include <windows.h>
+#endif
+#ifdef HAVE_GL_GL_H
+    #include <GL/gl.h>
+    #include <GL/glu.h>
+#elif defined(HAVE_OPENGL_GL_H)
+    #include <OpenGL/gl.h>
+    #include <OpenGL/glu.h>
+#else
+    #error no gl.h
+#endif
+
 #include <SDL/SDL.h>
 
 #include "graphics.h"
@@ -35,7 +40,7 @@ struct Winner {
 
 class Game {
 private:
-    // variáveis utilizadas para verificação dos frames por segundo.
+    // variï¿½veis utilizadas para verificaï¿½ï¿½o dos frames por segundo.
     GLint T0;
     GLint Frames;
     GLfloat *mat_shininess;
@@ -47,7 +52,7 @@ private:
     Point selected;
     Winner local_ganhador;
     
-    // Variáveis para o jogo.
+    // Variï¿½veis para o jogo.
     char matriz[3][3];
     int player;
     bool win;
@@ -57,7 +62,7 @@ private:
     
     /** new window size or exposure */
     void reshape(int width, int height);
-    /** Se nenhum ganhador retorna 0, senão o n£mero do ganhador. */
+    /** Se nenhum ganhador retorna 0, senï¿½o o nï¿½mero do ganhador. */
     int validaGanhador();
     
     void draw();

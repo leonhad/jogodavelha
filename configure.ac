@@ -24,10 +24,10 @@ AC_PROG_CXX
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 AC_PROG_LIBTOOL
-AM_PROG_AS
-AC_PROG_LN_S
 
 # Checks for library functions.
+AX_CHECK_GL
+AM_PATH_SDL([1.2.10])
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile

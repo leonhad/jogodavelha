@@ -92,7 +92,9 @@ host_triplet = @host@
 bin_PROGRAMS = jogodavelha$(EXEEXT)
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
+am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_gl.m4 \
+	$(top_srcdir)/m4/ax_lang_compiler_ms.m4 \
+	$(top_srcdir)/m4/ax_sdl.m4 $(top_srcdir)/m4/libtool.m4 \
 	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
 	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/configure.ac
@@ -188,9 +190,6 @@ AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
 CC = @CC@
-CCAS = @CCAS@
-CCASDEPMODE = @CCASDEPMODE@
-CCASFLAGS = @CCASFLAGS@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
 CPP = @CPP@
@@ -211,6 +210,8 @@ ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 FGREP = @FGREP@
+GL_CFLAGS = @GL_CFLAGS@
+GL_LIBS = @GL_LIBS@
 GREP = @GREP@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -244,11 +245,15 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 RANLIB = @RANLIB@
+SDL_CFLAGS = @SDL_CFLAGS@
+SDL_CONFIG = @SDL_CONFIG@
+SDL_LIBS = @SDL_LIBS@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
 VERSION = @VERSION@
+XMKMF = @XMKMF@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
