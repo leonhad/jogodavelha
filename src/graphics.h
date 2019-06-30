@@ -1,6 +1,23 @@
 #ifndef _graphics_h
 #define _graphics_h
 
+#ifdef HAVE_CONFIG_H
+#include "../config.h"
+#endif
+
+#if defined(HAVE_WINDOWS_H) && defined(_WIN32)
+    #include <windows.h>
+#endif
+#ifdef HAVE_GL_GL_H
+    #include <GL/gl.h>
+    #include <GL/glu.h>
+#elif defined(HAVE_OPENGL_GL_H)
+    #include <OpenGL/gl.h>
+    #include <OpenGL/glu.h>
+#else
+    #error no gl.h
+#endif
+
 class Graphics {
 public:
     static GLfloat ambient_light[];
@@ -21,9 +38,9 @@ private:
 public:
     Graphics();
     ~Graphics();
-    /** desenha um quadrado para seleção */
+    /** desenha um quadrado para seleï¿½ï¿½o */
     void DrawBox(void);
-    /** calcula as distancias padrão do bloco */
+    /** calcula as distancias padrï¿½o do bloco */
     void loadIdentity(void);
     void genLists();
     /** Desenha um # na tela */

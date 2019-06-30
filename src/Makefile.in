@@ -111,7 +111,8 @@ PROGRAMS = $(bin_PROGRAMS)
 am_jogodavelha_OBJECTS = game.$(OBJEXT) graphics.$(OBJEXT) \
 	main.$(OBJEXT)
 jogodavelha_OBJECTS = $(am_jogodavelha_OBJECTS)
-jogodavelha_LDADD = $(LDADD)
+am__DEPENDENCIES_1 =
+jogodavelha_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -312,10 +313,12 @@ jogodavelha_SOURCES = \
     graphics.cpp \
     main.cpp
 
+jogodavelha_LDADD = $(GL_LIBS) $(SDL_LIBS)
 noinst_HEADERS = \
     game.h \
     graphics.h
 
+AM_CPPFLAGS = $(GL_CFLAGS) $(SDL_CFLAGS)
 all: all-am
 
 .SUFFIXES:

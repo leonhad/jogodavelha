@@ -1,7 +1,6 @@
 #include <math.h>
 #include <cstdio>
 #include <iostream>
-#include <GL/gl.h>
 #include "graphics.h"
 
 using namespace std;
@@ -89,7 +88,7 @@ void Graphics::cube3d(GLfloat t, GLfloat x, GLfloat y, GLfloat z) {
     glVertex3f(x + t, y - t, z);
     glVertex3f(x, y - t, z);
     glEnd();
-    /* trás */
+    /* trï¿½s */
     glBegin(GL_QUADS);
     glNormal3f( 0.0f, 0.0f, -1.0f);
     glVertex3f(x,     y,     z - t);
@@ -322,7 +321,7 @@ void Graphics::DrawO(void) {
     for (v = 0.0f; v < pi2; v += pik) {
         for (u = 0.0f; u < pi2;u += pik) {
             poligonos++;
-            /* polígono */
+            /* polï¿½gono */
             /* normalO(u, v); */
             cosu = cos(u);
             cosv = cos(v);
