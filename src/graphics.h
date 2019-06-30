@@ -12,6 +12,7 @@
     #include <GL/gl.h>
     #include <GL/glu.h>
 #elif defined(HAVE_OPENGL_GL_H)
+    #define GL_SILENCE_DEPRECATION
     #include <OpenGL/gl.h>
     #include <OpenGL/glu.h>
 #else
