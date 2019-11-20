@@ -12,7 +12,7 @@ Game::Game() {
     
     SDL_Init(SDL_INIT_VIDEO);
     
-    screen = SDL_SetVideoMode(450, 450, 16, SDL_OPENGL|SDL_RESIZABLE);
+    screen = SDL_SetVideoMode(450, 450, 16, SDL_VIDEO_OPENGL|SDL_WINDOW_RESIZABLE);
     
     if ( ! screen ) {
         cerr << "Couldn't set 450x450 GL video mode" << endl;

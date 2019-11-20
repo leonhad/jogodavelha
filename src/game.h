@@ -24,7 +24,7 @@
     #error no gl.h
 #endif
 
-#include <SDL/SDL.h>
+#include <SDL2/SDL.h>
 
 #include "graphics.h"
 
@@ -47,7 +47,7 @@ private:
     GLfloat *mat_shininess;
     Graphics *graphics;
     SDL_Surface *screen;
-    SDLKey keys;
+    SDL_Keycode keys;
 
     
     Point selected;
