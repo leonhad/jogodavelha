@@ -46,7 +46,8 @@ private:
     GLint Frames;
     GLfloat *mat_shininess;
     Graphics *graphics;
-    SDL_Surface *screen;
+    SDL_Window* window;
+    SDL_Renderer* renderer;
     SDL_Keycode keys;
 
     

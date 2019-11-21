@@ -18,3 +18,5 @@ stamp-h1
 .deps
 /*~
 /*.gz
+*.exe
+.libs

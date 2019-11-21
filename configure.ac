@@ -27,6 +27,7 @@ AC_PROG_LIBTOOL
 
 # Checks for library functions.
 AX_CHECK_GL
+AX_CHECK_GLU
 AM_PATH_SDL([2.0.0])
 
 AC_CONFIG_FILES([Makefile
