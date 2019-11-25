@@ -20,3 +20,4 @@ stamp-h1
 /*.gz
 *.exe
 .libs
+.vscode
